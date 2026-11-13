@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отчёт ЕГРН — Максим Колчанов</title>
+<meta name="description" content="Клиент присылает адрес или кадастровый номер — бот находит объект, считает стоимость отчёта, принимает оплату и присылает готовый документ в чат.">
+<meta property="og:title" content="Отчёт ЕГРН — Максим Колчанов">
+<meta property="og:description" content="Клиент присылает адрес или кадастровый номер — бот находит объект, считает стоимость отчёта, принимает оплату и присылает готовый документ в чат.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Максим Колчанов<span>.</span></a>
+    <nav class="topnav">
+      <a href="index.html#projects">Проекты</a>
+      <a href="index.html#book">Книга</a>
+      <a href="index.html#approach">Как работаю</a>
+      <a href="index.html#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+<section class="case-head">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← все проекты</a>
+    <h1>Отчёт ЕГРН</h1>
+    <p class="sub">Telegram и MAX бот заказа отчётов из реестра</p>
+  </div>
+</section>
+
+<div class="wrap case-body">
+  <div class="case-text">
+<p>Задача была простая и неприятная: отчёт ЕГРН нужен в каждой второй сделке, а заказывают его вручную — сайт, форма, оплата, ожидание на почту. Бот сводит это к трём сообщениям в чат.</p><p>Внутри — поиск по адресу и кадастровому номеру, подсчёт цены, оплата ЮKassa и AI-помощник на LangChain с DeepSeek и FAISS: он отвечает на вопросы по объекту до заказа, чтобы человек не платил за отчёт, который ему не нужен.</p><p>Документация проекта — 29 глав: архитектура, обработчики, услуги, ошибки, тесты. Это не тщеславие: без неё я сам через месяц не помню, почему платёж идемпотентен именно так.</p>  </div>
+  <aside class="case-side">
+    <div class="side-block">
+      <h5>Факты</h5>
+      <div class="row"><span class="k">код</span><span>816 файлов, 175 468 строк Python</span></div>
+      <div class="row"><span class="k">платформы</span><span>Telegram и MAX</span></div>
+      <div class="row"><span class="k">оплата</span><span>YooKassa, полный цикл</span></div>
+      <div class="row"><span class="k">статус</span><span>в продакшене, версия 1.0.5</span></div>
+    </div>
+    <div class="side-block">
+      <h5>Технологии</h5>
+      <div class="chips">
+<span class="chip">Python</span><span class="chip">Telegram Bot API</span><span class="chip">MAX Bot API</span><span class="chip">YooKassa</span><span class="chip">SQLite</span><span class="chip">LangChain</span><span class="chip">DeepSeek</span><span class="chip">FAISS</span>      </div>
+    </div>
+    <div class="side-block">
+      <h5>Ссылка</h5>
+      <a class="btn" href="https://t.me/EKBEGRNBot">@EKBEGRNBot</a>
+    </div>
+  </aside>
+</div>
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 Максим Колчанов · Екатеринбург</div>
+    <div>Сделано вручную: HTML + CSS, без конструкторов</div>
+  </div>
+</footer>
+</body>
+</html>

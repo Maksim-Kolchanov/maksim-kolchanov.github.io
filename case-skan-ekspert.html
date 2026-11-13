@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабинет сделки «Скан.Эксперт» — Максим Колчанов</title>
+<meta name="description" content="Витрина проверок объекта с ценами, оплатой и отчётом — внутри мессенджера MAX. Клиент видит каталог, платит и получает PDF, не выходя из приложения.">
+<meta property="og:title" content="Кабинет сделки «Скан.Эксперт» — Максим Колчанов">
+<meta property="og:description" content="Витрина проверок объекта с ценами, оплатой и отчётом — внутри мессенджера MAX. Клиент видит каталог, платит и получает PDF, не выходя из приложения.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Максим Колчанов<span>.</span></a>
+    <nav class="topnav">
+      <a href="index.html#projects">Проекты</a>
+      <a href="index.html#book">Книга</a>
+      <a href="index.html#approach">Как работаю</a>
+      <a href="index.html#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+<section class="case-head">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← все проекты</a>
+    <h1>Кабинет сделки «Скан.Эксперт»</h1>
+    <p class="sub">MAX Mini App и бот для заказа проверок недвижимости</p>
+  </div>
+</section>
+
+<div class="wrap case-body">
+  <div class="case-text">
+<p>Это следующий шаг после бота ЕГРН — не «ещё один бот», а кабинет: каталог проверок, корзина, оплата, статусы заказа и PDF-отчёт, всё внутри Mini App.</p><p>Серверная часть — FastAPI с PostgreSQL, Redis и Celery для фоновых задач; фронт — React и TypeScript в строгом режиме. 199 автотестов закрывают бизнес-логику заказа: цена, статусы, повторная оплата, отмена.</p><p>Что честно: до продакшена осталось 10 %, и это не код, а операционка — поддержка, регламент возвратов, договор. Проект живёт на моём сервере и работает, но массовым продуктом я его пока не называю.</p>  </div>
+  <aside class="case-side">
+    <div class="side-block">
+      <h5>Факты</h5>
+      <div class="row"><span class="k">код</span><span>807 файлов, 149 347 строк Python + 18 218 строк TypeScript</span></div>
+      <div class="row"><span class="k">тесты</span><span>199 passed, 1 skipped, ruff clean, TypeScript strict</span></div>
+      <div class="row"><span class="k">деплой</span><span>Docker Compose, 6 контейнеров, Nginx + TLS</span></div>
+      <div class="row"><span class="k">статус</span><span>90 % к продакшену, задеплоен</span></div>
+    </div>
+    <div class="side-block">
+      <h5>Технологии</h5>
+      <div class="chips">
+<span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Celery</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Docker</span><span class="chip">Nginx</span>      </div>
+    </div>
+  </aside>
+</div>
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 Максим Колчанов · Екатеринбург</div>
+    <div>Сделано вручную: HTML + CSS, без конструкторов</div>
+  </div>
+</footer>
+</body>
+</html>
