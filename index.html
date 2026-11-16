@@ -11,10 +11,11 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Перейти к содержимому</a>
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="index.html">Максим Колчанов<span>.</span></a>
-    <nav class="topnav">
+    <nav class="topnav" aria-label="Основная навигация">
       <a href="index.html#projects">Проекты</a>
       <a href="index.html#book">Книга</a>
       <a href="index.html#approach">Как работаю</a>
@@ -22,6 +23,7 @@
     </nav>
   </div>
 </header>
+<main id="main-content" tabindex="-1">
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-head">
@@ -31,6 +33,7 @@
       </div>
       <h1 class="name">Максим Колчанов</h1>
       <p class="tagline">17 лет в недвижимости. С 2023 года пишу сервисы, которыми работаю сам</p>
+      <a class="hero-jump" href="#projects">Смотреть проекты <span>→</span></a>
     </div>
     <figure class="portrait">
       <div class="portrait-inner">
@@ -58,7 +61,6 @@
           <span class="text">исследование «Язык как операционная система»</span>
         </div>
       </div>
-      <a class="hero-jump" href="#projects">Смотреть проекты <span>→</span></a>
     </div>
   </div>
 </section>
@@ -120,7 +122,7 @@
         <p>Книга «Язык как операционная система» — о том, как формулировки задают
 мышление. Оттуда рабочая этика: сначала факт, потом вывод.
 </p>
-        <ul><li>Авторская книга, многотомник</li><li>{&#39;Метод&#39;: &#39;спокойствие → осознание → созерцание → создание&#39;}</li><li>Источник там, где он есть; наблюдение помечено наблюдением</li></ul>
+        <ul><li>Авторская книга, многотомник</li><li>Метод: спокойствие → осознание → созерцание → создание</li><li>Источник там, где он есть; наблюдение помечено наблюдением</li></ul>
       </article>
     </div>
   </div>
@@ -340,8 +342,8 @@
     <div>
       <span class="mark" style="display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px">07 · контакт</span>
       <h2 class="contact-lead">Задача есть — напишите</h2>
-      <p class="contact-hint">Проверка объекта, отчёт, сервис под ваш процесс. Отвечу по делу, без брифа на десять страниц.</p>
-      <a class="btn" href="https://t.me/EKBEGRNBot">Написать в Telegram</a>
+      <p class="contact-hint">Кнопка ведёт в бота ЕГРН — там заказывают отчёты из реестра. Это не личный чат: проверку объекта и сервисы под процесс обсуждаем отдельно.</p>
+      <a class="btn" href="https://t.me/EKBEGRNBot">Открыть бота ЕГРН</a>
     </div>
     <div class="contact-list">
       <div class="row"><span>Telegram</span><span>@EKBEGRNBot</span></div>
@@ -351,6 +353,7 @@
     </div>
   </div>
 </section>
+</main>
 <footer>
   <div class="wrap foot">
     <div>© 2026 Максим Колчанов · Екатеринбург</div>
