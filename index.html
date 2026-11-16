@@ -37,8 +37,13 @@
     </div>
     <figure class="portrait">
       <div class="portrait-inner">
-        <img src="assets/img/portrait.jpg" width="1200" height="1600"
-             alt="Максим Колчанов — портрет">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/img/portrait-480.webp 480w, assets/img/portrait-800.webp 800w, assets/img/portrait-1200.webp 1200w"
+                  sizes="(max-width: 1000px) 92vw, 46vw">
+          <img src="assets/img/portrait-1200.jpg" width="1200" height="1600"
+               alt="Максим Колчанов — портрет" loading="eager" decoding="async">
+        </picture>
       </div>
       <figcaption><span class="dot"></span>Максим Колчанов · Екатеринбург</figcaption>
     </figure>
@@ -256,8 +261,15 @@
       </div>
     </div>
     <figure class="workspace">
-      <img src="assets/img/workspace.jpg" width="1280" height="720"
-           alt="Рабочее место: два монитора с кодом">
+      <div class="workspace-inner">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/img/workspace-480.webp 480w, assets/img/workspace-800.webp 800w, assets/img/workspace-1200.webp 1200w"
+                  sizes="(max-width: 1000px) 92vw, 100vw">
+          <img src="assets/img/workspace-1200.jpg" width="1200" height="675"
+               alt="Рабочее место: два монитора с кодом" loading="lazy" decoding="async">
+        </picture>
+      </div>
       <figcaption><span class="fig">Кадр 01</span>Рабочее место: два монитора, код, кофе. Всё остальное — детали, которые здесь не видны.</figcaption>
     </figure>
   </div>
