@@ -94,18 +94,18 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     radial-gradient(1150px 620px at 76% 22%, rgba(207, 167, 60, 0.055), transparent 70%),
     radial-gradient(900px 520px at 8% 86%, rgba(126, 137, 150, 0.055), transparent 72%);
 }
-/* сетка: лицо справа на всю высоту, на телефоне — сразу под именем */
+/* сетка: текст шире, портрет — компактная карточка справа; на телефоне под именем */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   grid-template-areas: "head portrait" "body portrait";
   grid-template-rows: auto 1fr;
-  column-gap: var(--s6); row-gap: var(--s3);
+  column-gap: var(--s5); row-gap: var(--s3);
   align-items: start;
 }
 .hero-head { grid-area: head; min-width: 0; padding-top: var(--s2); }
 .hero-body { grid-area: body; min-width: 0; }
-.hero-grid .portrait { grid-area: portrait; align-self: center; }
+.hero-grid .portrait { grid-area: portrait; align-self: center; justify-self: end; width: 100%; max-width: 400px; }
 
 .eyebrow {
   display: flex; flex-wrap: wrap; align-items: center; gap: var(--s1) var(--s2);
@@ -160,7 +160,7 @@ h1.name {
   filter: blur(30px); pointer-events: none;
 }
 .portrait-inner, .workspace-inner { position: relative; border-radius: 12px; overflow: hidden; }
-.portrait-inner img { width: 100%; height: auto; }
+.portrait-inner img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; }
 .workspace-inner img { width: 100%; height: clamp(190px, 26vw, 320px); object-fit: cover; }
 /* виньетка: край снимка темнее своего фона — шва к паспарту не видно */
 .portrait-inner::before, .workspace-inner::before {
@@ -468,7 +468,7 @@ footer { padding: var(--s5) 0; border-top: 1px solid var(--line-soft); }
     grid-template-rows: auto auto auto;
     row-gap: var(--s3);
   }
-  .portrait { max-width: 100%; margin-top: 0; }
+  .hero-grid .portrait { max-width: 380px; margin-top: 0; justify-self: start; }
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
   .metric:nth-child(3) { padding-left: 0; border-left: none; }
   .metric:nth-child(n+3) { border-top: 1px solid var(--line-soft); }
@@ -489,9 +489,9 @@ footer { padding: var(--s5) 0; border-top: 1px solid var(--line-soft); }
   .tagline { font-size: 20px; }
   .eyebrow { font-size: 11.5px; letter-spacing: 0.1em; }
   .wrap { width: calc(100% - 36px); }
-  /* фото компактнее: было почти 500 px в высоту */
-  .portrait { max-width: 100%; }
-  .portrait-inner img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center 22%; height: 340px; }
+  /* фото компактнее: на телефоне это визитка, а не постер */
+  .hero-grid .portrait { max-width: 300px; }
+  .portrait-inner img { height: 240px; object-position: center 22%; }
   .portrait figcaption { font-size: 11.5px; }
   /* метрики в две колонки вместо четырёх строк */
   .metrics-grid { grid-template-columns: 1fr 1fr; }
